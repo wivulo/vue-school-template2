@@ -1,19 +1,32 @@
-<template>
-    <div>
-        <h1>{{ message }}</h1>
-    </div>
-</template>
-
 <script>
+import CreateAccountComponent from './components/CreateAccountComponent.vue';
+import HeaderComponent from "./components/HeaderComponent.vue";
+
 export default {
     data() {
         return {
-            message: 'Hello, Vue 2!',
+            user: {}
         };
     },
+    methods: {
+        handleCreateAccount(payload) {
+            this.user = payload;
+        }
+    },
+    components: {
+        "header-component": HeaderComponent,
+        "create-account-component": CreateAccountComponent
+    }
 };
 </script>
 
-<style lang="scss">
+<template>
+    <div class="app-component background w-100 h-100">
+        <div class="w-100 h-100 d-flex flex-column">
+            <header-component :user="user"></header-component>
+            <create-account-component @on-create-account-tunnel="handleCreateAccount"></create-account-component>
+        </div>
+    </div>
+</template>
 
-</style>
+<style scoped></style>

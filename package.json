@@ -33,6 +33,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "core-js": "^3.36.0",
     "vue": "^2.7.16"
   },
