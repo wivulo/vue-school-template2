@@ -24,8 +24,7 @@ export default {
     <div class="app-component background w-100 h-100">
         <div class="w-100 h-100 d-flex flex-column">
             <header-component :user="user"></header-component>
-            <!-- <create-account-component @on-create-account-tunnel="handleCreateAccount">
-            </create-account-component> -->
+            
             <router-view></router-view>
         </div>
     </div>
