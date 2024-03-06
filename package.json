@@ -35,7 +35,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "core-js": "^3.36.0",
-    "vue": "^2.7.16"
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5"
   },
   "browserslist": [
     "> 1%",

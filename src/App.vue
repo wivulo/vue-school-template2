@@ -24,9 +24,15 @@ export default {
     <div class="app-component background w-100 h-100">
         <div class="w-100 h-100 d-flex flex-column">
             <header-component :user="user"></header-component>
-            <create-account-component @on-create-account-tunnel="handleCreateAccount"></create-account-component>
+            <!-- <create-account-component @on-create-account-tunnel="handleCreateAccount">
+            </create-account-component> -->
+            <router-view></router-view>
         </div>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    .app-component {
+        min-height: 100vh;
+    }
+</style>

@@ -1,9 +1,44 @@
+<script>
+import DropdownComponent from "./DropdownComponent.vue";
+import logo from "../assets/logo.png";
+
+export default {
+    props: ["user"],
+    data() {
+        return {
+            title: "Haeder component",
+            logoImage: logo,
+            courses: [
+                'Video Courses',
+                'Vue.js Master Class 2024 Edition',
+                'Vue.js Master Class',
+                'Workshops',
+                'Mastering Nuxt'
+            ],
+            businessServices: [
+                'Vue.js Corporate Training', 
+                'Workshops', 
+                'Hiring'
+            ],
+            events: [
+                "Vue.js Nation",
+                "Nuxt Nation",
+                "Vue.js Forge"
+            ]
+        };
+    },
+    components: {
+        "dropdown-component": DropdownComponent
+    }
+}
+</script>
+
 <template>
     <nav class="my-nav w-100 h-10 text-white d-flex align-items-center">
         <div class="my-nav-content px-5 d-flex gap-1 w-100">
             <a href="" class="m-0">
-                <!-- <img src="../assets/img/logo.png" alt="logo" > -->
-                VUEschool
+                <img :src="logoImage" alt="logo" >
+                <!-- VUEschool -->
             </a>
 
             <ul class="d-flex gap-3 list align-items-center m-0 flex-fill">
@@ -53,53 +88,24 @@
                 </template>
                 <template v-else>
                     <li>
-                        <button class="btn text-white">
-                            Login
-                        </button>
+                        <router-link to="/login">
+                            <button class="btn text-white">
+                                Login
+                            </button>
+                        </router-link>
                     </li>
                     <li>
+                        <router-link to="/">
                         <button class="btn py-2 px-3" id="create-account">
                             Create Account
                         </button>
+                    </router-link>
                     </li>
                 </template>
             </ul>
         </div>
     </nav>
 </template>
-
-<script>
-import DropdownComponent from "./DropdownComponent.vue";
-
-export default {
-    props: ["user"],
-    data() {
-        return {
-            title: "Haeder component",
-            courses: [
-                'Video Courses',
-                'Vue.js Master Class 2024 Edition',
-                'Vue.js Master Class',
-                'Workshops',
-                'Mastering Nuxt'
-            ],
-            businessServices: [
-                'Vue.js Corporate Training', 
-                'Workshops', 
-                'Hiring'
-            ],
-            events: [
-                "Vue.js Nation",
-                "Nuxt Nation",
-                "Vue.js Forge"
-            ]
-        };
-    },
-    components: {
-        "dropdown-component": DropdownComponent
-    }
-}
-</script>
 
 <style scoped>
 .my-nav-content a, 

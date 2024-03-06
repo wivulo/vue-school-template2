@@ -15,6 +15,8 @@ html, body, #app {
     --darkblue-2: rgb(72, 66, 163);
     --white-1: rgb(255, 255, 255);
     --limon: rgb(88, 202, 168);
+    --limon-soft: rgba(88, 202, 168, .7);
+    --limon-dark: rgb(31, 114, 89);
     --violet: rgb(94, 115, 235);
     --violet-soft: rgba(94, 115, 235, .7);
 }
@@ -33,6 +35,14 @@ a{
 
 .bg-white{
     background-color: var(--white-1);
+}
+
+.text-limon{
+    color: var(--limon);
+}
+
+.bg-limon{
+    background-color: var(--limon);
 }
 
 .list{
@@ -68,6 +78,10 @@ a{
     width: 40%;
 }
 
+.w-35{
+    width: 35%;
+}
+
 .w-30{
     width: 30%;
 }
@@ -84,6 +98,14 @@ a{
     height: 20%;
 }
 
+.h-30{
+    height: 30%;
+}
+
+.h-55{
+    height: 55%;
+}
+
 .h-60{
     height: 60%;
 }
@@ -92,3 +114,6 @@ a{
     border-radius: 10px;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
